@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
 
 logging:
   level:
@@ -11,6 +11,6 @@ ghost:
     enabled: true
     file:
       enabled: true
-      recording: false
-      reading: true
+      recording: true
+      reading: false
       localPath: ./target/data
