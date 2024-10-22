@@ -18,5 +18,6 @@ public class PostObjectResponse {
     private String name;
     private ObjectPostData data;
     private Date date;
+    private Date createdAt;
 
 }

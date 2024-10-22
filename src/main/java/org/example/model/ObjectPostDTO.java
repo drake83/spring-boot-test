@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 
 @Getter
 @Setter
@@ -15,5 +17,6 @@ public class ObjectPostDTO {
     private String id;
     private String name;
     private ObjectPostData data;
+    private Date createdAt;
 
 }

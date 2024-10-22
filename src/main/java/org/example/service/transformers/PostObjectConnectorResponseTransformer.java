@@ -26,6 +26,7 @@ public class PostObjectConnectorResponseTransformer implements IRestResponseTran
             out.setName(a.getName());
             out.setData(a.getData());
             out.setDate(new Date());
+            out.setCreatedAt(a.getCreatedAt());
             return out;
         }).orElseThrow(RuntimeException::new);
     }
