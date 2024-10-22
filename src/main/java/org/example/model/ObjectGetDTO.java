@@ -10,10 +10,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ObjectDTO {
+public class ObjectGetDTO {
 
     private String id;
     private String name;
-    private ObjectData data;
+    private ObjectGetData data;
 
 }

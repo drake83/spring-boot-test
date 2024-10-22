@@ -12,11 +12,11 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetObjectResponse {
+public class PostObjectResponse {
 
     private String id;
     private String name;
-    private ObjectGetData data;
+    private ObjectPostData data;
     private Date date;
 
 }

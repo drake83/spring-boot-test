@@ -12,7 +12,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ObjectData {
+public class ObjectPostData {
 
     private Integer year;
     private Long price;
@@ -23,6 +23,7 @@ public class ObjectData {
     @JsonProperty("Hard disk size")
     private String hardDiskSize;
 
+    private Date createdAt;
 
 
 }

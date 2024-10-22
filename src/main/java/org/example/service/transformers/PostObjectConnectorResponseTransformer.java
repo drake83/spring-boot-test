@@ -4,21 +4,24 @@ package org.example.service.transformers;
 import org.example.aspectj.model.IRestResponseTransformer;
 import org.example.aspectj.model.RestConnectorResponse;
 import org.example.model.GetObjectResponse;
-import org.example.model.ObjectGetDTO;
+import org.example.model.ObjectPostDTO;
+import org.example.model.ObjectPostData;
+import org.example.model.PostObjectResponse;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.Date;
+import java.util.Optional;
 
 @Service
-public class GetObjectConnectorResponseTransformer implements IRestResponseTransformer<ObjectGetDTO, GetObjectResponse> {
+public class PostObjectConnectorResponseTransformer implements IRestResponseTransformer<ObjectPostDTO, PostObjectResponse> {
 
     @Override
-    public GetObjectResponse transform(RestConnectorResponse<ObjectGetDTO> response) {
+    public PostObjectResponse transform(RestConnectorResponse<ObjectPostDTO> response) {
 
-        Optional<ObjectGetDTO> res = Optional.ofNullable(response.getResponse()).map(HttpEntity::getBody);
+        Optional<ObjectPostDTO> res = Optional.ofNullable(response.getResponse()).map(HttpEntity::getBody);
         return res.map(a -> {
-            GetObjectResponse out = new GetObjectResponse();
+            PostObjectResponse out = new PostObjectResponse();
             out.setId(a.getId());
             out.setName(a.getName());
             out.setData(a.getData());
