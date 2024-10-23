@@ -11,6 +11,6 @@ ghost:
     enabled: true
     file:
       enabled: true
-      recording: false
-      reading: true
+      recording: true
+      reading: false
       localPath: ./target/data
